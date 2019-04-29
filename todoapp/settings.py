@@ -133,13 +133,13 @@ STATICFILES_DIRS = [
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
-EMAIL_HOST = os.environ.get("EMAIL_HOST")
-EMAIL_PORT = int(os.environ.get("EMAIL_PORT"))
+# EMAIL_HOST = os.environ.get("EMAIL_HOST")
+# EMAIL_PORT = int(os.environ.get("EMAIL_PORT"))
 
-# EMAIL_HOST = 'smtp.yandex.ru'
+EMAIL_HOST = 'smtp.yandex.ru'
 EMAIL_HOST_USER = 'notify.usikovan@yandex.ru'
 EMAIL_HOST_PASSWORD = "Fm8Aigp-D4"
-# EMAIL_PORT = 465
+EMAIL_PORT = 465
 EMAIL_USE_SSL = True
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
