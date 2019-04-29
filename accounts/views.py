@@ -48,7 +48,7 @@ def register(request):
 			new_user = form.save(commit=False)
 			new_user.set_password(form.cleaned_data["password"])
 			new_user.save()
-			if sittings.AVATAR_SITE:
+			if settings.AVATAR_SITE:
 				Profile.objects.create(user = new_user, avatar = ImageFieldFile(instance=None, field=FileField(), name='user_avatars/default.png'))
 			else:
 				Profile.objects.create(user = new_user, field=FileField(), name='user_avatars/default.png')
